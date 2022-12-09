@@ -681,7 +681,7 @@ document.addEventListener('keyup', e => {
     console.log(inputSearch);
     // dios contiene el nuevo array
     let buscarPersonajes = (data.characters).filter(elemento => (elemento.name).toLowerCase().includes(inputSearch))
-
+console.log(buscarPersonajes)
     buscarPersonajes.forEach(element => {
 
       const createElement = document.createElement("div")
@@ -713,10 +713,10 @@ boton.addEventListener('click',() => {
   accederAlDom.style.display = 'block';
 
   const cardConteiner = document.getElementById('cardConteiner');
-  cardConteiner.style.display = 'none';
-  document.getElementById('contador').style.display = 'none';
-
+  cardConteiner.style.display = 'block';
+  document.getElementById('contador').style.display = 'block';
 })
+
 
 const mostrarMale = (data.characters).filter(e => e.gender == "male")
 console.log(mostrarMale.length)
@@ -737,7 +737,7 @@ function drawChart() {
 ]);
 
   // Optional; add a title and set the width and height of the chart
-  var options = {'title':'Data about the characters', 'width':550, 'height':400};
+  var options = {'title':'Data about the characters', 'width':355, 'height':370};
 
   // Display the chart inside the <div> element with id="piechart"
   var chart = new google.visualization.PieChart(document.getElementById('piechart'));

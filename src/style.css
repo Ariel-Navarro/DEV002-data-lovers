@@ -36,10 +36,12 @@ body {
 #barra {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   background-color: rgba(11, 11, 12, 0.555);
   margin-bottom: 0;
   width: 100%;
-  /* min-width: 360px; */
+  justify-content: space-around;
+  align-items:center;
 }
 
 #logo {
@@ -49,39 +51,18 @@ body {
   margin-top: 25px;
   margin-left: 20px;
   width: auto;
-
+  margin-bottom: 25px;
 }
 
 h1 {
   font-family: 'Island Moments', cursive;
   font-size: 80px;
-  right: 60px;
   bottom: 20px;
   top: 20px;
   margin-top: 0;
-  position: relative;
   left: 200px;
   margin: 0;
   text-align: center;
-}
-
-.select {
-  position: relative;
-  display: flex;
-  align-self: center;
-  left: 450px;
-  top: 130px;
-  right: 20px;
-  font-weight: bold;
-
-}
-
-hr {
-  margin: 0;
-  height: 5px;
-  background-color: black;
-  width: 100%;
-
 }
 
 #contenedor {
@@ -90,53 +71,41 @@ hr {
 }
 
 #search {
+  height: 15px;
+  width: 200px;
   display: flex;
   position: relative;
-  top: 320px;
-  width: 480px;
-  height: 30px;
   border-radius: 40px;
   border: 3px solid rgba(102, 95, 95, 0.629);
   border-color: black;
   font-family: 'Montserrat', sans-serif;
-  right: 100px;
-  width: 480px;
-
 }
 
 #lupa {
-  display: flex;
-  position: relative;
-  top: 290px;
-  width: 25px;
-  left: 390px;
-
+  width: 18px;
 }
 
 select {
   height: 35px;
   border-radius: 20px;
   width: auto;
+  display: flex;
+  position: relative;
+  font-weight: bold;
 }
 
 .filterSelect {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  position: relative;
-  right: 500px;
-  bottom: 20px;
   margin: 0;
-
-}
-
-#glasses {
-  align-self: baseline;
-  left: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10px;
 }
 
 #buho {
-  width: 5%;
+  height: 6%;
+  width: 10%;
   display: flex;
   position: relative;
   left: 10px;
@@ -157,11 +126,7 @@ select {
   position: relative;
 }
 
-#hibrido {
-  position: absolute;
-  top: 60%;
-  left: 80%;
-}
+
 
 #foto {
   margin-left: 5%;
@@ -173,16 +138,17 @@ select {
 .subtitles {
   font-family: 'Calligraffitti', cursive;
   display: flex;
-  position: relative;
   bottom: 70px;
-  font-size: 65px;
   margin-left: 15%;
   margin-right: 30px;
-
+  font-size: 20px;
+  top: 80px;
+  left: 20px;
 }
 
 #summary {
   margin-right: 0;
+  margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
 }
@@ -192,12 +158,20 @@ select {
   justify-content: space-between;
 }
 
+#hibrido {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 p {
   display: flex;
-  font-size: 30px;
-  text-align: justify;
   font-family: 'Poppins', sans-serif;
-  margin-right: 300px;
+  font-size: 12px;
+  margin-right: 55px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 #infoAboutHouses {
@@ -215,7 +189,7 @@ p {
 h3 {
   display: flex;
   align-self: center;
-  font-size: 80px;
+  font-size: 25px;
   font-family: 'Calligraffitti', cursive;
   text-shadow: black;
   margin-left: 43%;
@@ -277,7 +251,7 @@ h3 {
 
 #paragraph {
   font-family: 'Caveat', cursive;
-  font-size: 180%;
+  font-size: 1rem;
   display: flex;
   align-items: right;
   align-self: center;
@@ -397,10 +371,17 @@ h3 {
 
 button{
   height: 70px;
-  width: 150px;
+  width: 100px;
   color: #fff;
   background-color: #641e72;
   cursor: pointer ;
+  margin-bottom: 20px;
+}
+
+#piechart{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 @media only screen and (min-width:320px) and (max-width:1280px) {
@@ -408,17 +389,19 @@ button{
 
     margin-bottom: 5px;
     background-size: 100%;
+    overflow-x: no-scroll;
   }
 
   #barra {
-    display: flexbox;
+    display: flex;
     flex-wrap: wrap;
     margin: 0;
-    height: 100px;
-  }
+    }
 
   h1 {
-
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
     font-size: 28px;
     margin-right: 0;
     margin-top: 5px;
@@ -435,102 +418,20 @@ button{
     margin-left: 20px;
   }
 
-  .select {
-    display: flex;
-    position: relative;
-    font-size: 7px;
-    top: 77px;
-
-  }
-
   .filterSelect {
     display: flex;
-    position: relative;
-    right: 435px;
-    bottom: 87px;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
   }
-
-  select {
-    width: auto;
-    height: 10px;
-    display: flex;
-    position: relative;
 
   }
 
-  #search {
-    display: flex;
-    position: relative;
-    left: 65px;
-    width: 150px;
-    height: 15px;
-    top: 50px;
-  }
 
-  hr {
-    height: 2px;
-  }
 
-  #raya {
 
-    height: 0;
-  }
 
-  #lupa {
-    left: 222px;
-    top: 32px;
-    width: 18px;
-  }
-
-  #buho {
-    height: 6%;
-    width: 10%;
-
-  }
-
-  #glasses {
-
-    height: 0%;
-    width: 00%;
-
-  }
-
-  #foto {
-    width: 28%;
-    height: 28%;
-    margin-right: 5%;
-    margin-top: 30%;
-  }
-
-  #paragraph {
-    font-size: 20px;
-    margin-right: 5%;
-
-  }
-
-  #hibrido {
-    top: 0;
-    left: 0;
-  }
-
-  .subtitles {
-    font-size: 20px;
-    top: 80px;
-    left: 20px;
-  }
-
-  p {
-    font-size: 12px;
-    margin-right: 55px;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-
-  h3 {
-    font-size: 25px;
-  }
 
   .card {
     width: 50px;
@@ -561,18 +462,30 @@ button{
   }
 
   hr {
+    margin: 0;
     height: 2px;
+    background-color: black;
+    width: 100%;
   }
-}
 
-/* @media only screen and (min-width:360px) and (max-width:1366px) {
+  #piechart{
+
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  button{
+    height: 40px;
+    width: 80px;
+    color: #fff;
+    background-color: #641e72;
+    cursor: pointer ;
+    font-size: 10px;
+  }
 
 
-} */
 
-#piechart{
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
+
+
 
