@@ -30,6 +30,7 @@ selectCharacters.addEventListener('change', () => {
     const filtro = aToZ(data.characters)
 
 
+
     filtro.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
@@ -221,7 +222,7 @@ document.getElementById("btnCharac").addEventListener("click", () => {
   accederAlDom.style.display = 'none';
   const cardConteiner = document.getElementById('cardConteiner');
   cardConteiner.style.display = 'block';
-
+  document.getElementById("contador").innerHTML = `<spam class="countBlue">You are viewing:</spam> ${data.characters.length} characters`;
   const characters = data.characters;
   characters.forEach(element => {
     const createElement = document.createElement("div")
@@ -449,7 +450,7 @@ document.getElementById("btnSpells").addEventListener("click", () => {
   accederAlDom.style.display = 'none';
   const cardConteiner = document.getElementById('cardConteiner');
   cardConteiner.style.display = 'block';
-
+  document.getElementById("contador").innerHTML = `<spam class="countBlue">You are viewing:</spam> ${data.spells.length} spells`;
   const spells = data.spells;
   spells.forEach(element => {
 
@@ -550,7 +551,7 @@ document.getElementById("btnBooks").addEventListener("click", () => {
   accederAlDom.style.display = 'none';
   const cardConteiner = document.getElementById('cardConteiner');
   cardConteiner.style.display = 'block';
-
+  document.getElementById("contador").innerHTML = `<spam class="countBlue">You are viewing:</spam> ${data.books.length} books`;
   const books = data.books;
   books.forEach(element => {
     const createElement = document.createElement("div")
@@ -612,7 +613,7 @@ selectPotions.addEventListener('change', () => {
     cardConteiner.style.display = 'block';
 
     const pociones = potionsDesc(data.potions)
-  
+
     pociones.forEach(element => {
       const createElement = document.createElement("div")
       createElement.setAttribute("class", 'contenedorCard');
@@ -642,7 +643,7 @@ document.getElementById("btnPotions").addEventListener("click", () => {
   accederAlDom.style.display = 'none';
   const cardConteiner = document.getElementById('cardConteiner');
   cardConteiner.style.display = 'block';
-
+  document.getElementById("contador").innerHTML = `<spam class="countBlue">You are viewing:</spam> ${data.potions.length} potions`;
   const potions = data.potions;
   potions.forEach(element => {
     const createElement = document.createElement("div")
@@ -680,7 +681,7 @@ document.addEventListener('keyup', e => {
     console.log(inputSearch);
     // dios contiene el nuevo array
     let buscarPersonajes = (data.characters).filter(elemento => (elemento.name).toLowerCase().includes(inputSearch))
-
+console.log(buscarPersonajes)
     buscarPersonajes.forEach(element => {
 
       const createElement = document.createElement("div")
@@ -703,3 +704,43 @@ document.addEventListener('keyup', e => {
     });
   }
 })
+
+const boton= document.getElementById('button')
+boton.addEventListener('click',() => {
+  const x = document.querySelector(".test")
+  x.innerHTML = ""
+  const accederAlDom = document.getElementById('home')
+  accederAlDom.style.display = 'block';
+
+  const cardConteiner = document.getElementById('cardConteiner');
+  cardConteiner.style.display = 'block';
+  document.getElementById('contador').style.display = 'block';
+})
+
+
+const mostrarMale = (data.characters).filter(e => e.gender == "male")
+console.log(mostrarMale.length)
+
+const mostrarFemale = (data.characters).filter(e => e.gender =="female")
+console.log(mostrarFemale.length)
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Male', 269],
+  ['Female', 134],
+
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Data about the characters', 'width':355, 'height':370};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+

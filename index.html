@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,11 +29,16 @@
   <div id="barra">
     <img id="logo" src="imag/logo-Harry-Potter.png" />
     <h1>The Harry Potter's world</h1>
-    <div>
+
+
       <input id="search" type="text">
+      <button id="button">Home</button>
       <img src="imag/buscando.png" id="lupa">
-    </div>
-    <section id="filter" class="filterSelect">
+
+
+  </div>
+  <hr>
+   <section id="filter" class="filterSelect">
       <select name="characters" class="select" id="chooseCharacters">
         <option  disabled selected>Filter for Characters</option>
         <option class="opcion" value="a-z">A-Z</option>
@@ -62,13 +68,11 @@
         <option class="opcion" value="descendiente">Z-A</option>
       </select>
     </section>
-  </div>
-  <hr>
+  <div id="contador" class="contaIndividual"></div>
 
   <div id="contenedor">
     <div id="raya"></div>
     <img id="buho" src="imag/buho.png">
-    <img id="glasses" src="imag/lentes.png" width="5%">
     <button id="btnCharac" class="btnPrincipal">Characters</button>
     <button id="btnSpells" class="btnPrincipal">Spells</button>
     <button id="btnBooks" class="btnPrincipal">Books</button>
@@ -139,7 +143,12 @@
       </section>
     </div>
 
-  </section>
+
+
+<div id="piechart"></div>
+</section>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 
   <script src="./main.js" type="module"></script>
 </body>

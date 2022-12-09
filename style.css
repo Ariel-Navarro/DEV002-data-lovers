@@ -12,7 +12,6 @@ body {
   margin-left: 0;
   margin-bottom: 30px;
   background-repeat: repeat-y;
-
 }
 
 @keyframes bganimation {
@@ -37,11 +36,12 @@ body {
 #barra {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   background-color: rgba(11, 11, 12, 0.555);
   margin-bottom: 0;
   width: 100%;
-  min-width: 320px;
-
+  justify-content: space-around;
+  align-items:center;
 }
 
 #logo {
@@ -51,89 +51,61 @@ body {
   margin-top: 25px;
   margin-left: 20px;
   width: auto;
-
+  margin-bottom: 25px;
 }
 
 h1 {
   font-family: 'Island Moments', cursive;
-  font-size: 700%;
-  left: 450px;
-  right: 60px;
+  font-size: 80px;
   bottom: 20px;
-  top: 50px;
-  margin-top: 25px;
-  position: relative;
-}
-
-.select {
-  position: relative;
-  display: flex;
-  align-self: center;
-  left: 450px;
-  top: 100px;
-  right: 20px;
-  font-weight: bold;
-
-}
-
-hr {
+  top: 20px;
+  margin-top: 0;
+  left: 200px;
   margin: 0;
-  height: 5px;
-  background-color: black;
-  width: 100%;
-
+  text-align: center;
 }
 
 #contenedor {
   display: flex;
-  justify-content: flex-start;
 
 }
 
 #search {
+  height: 15px;
+  width: 200px;
   display: flex;
   position: relative;
-  right: 200px;
-  top: 220px;
-  width: 310%;
-  height: 30px;
   border-radius: 40px;
   border: 3px solid rgba(102, 95, 95, 0.629);
   border-color: black;
   font-family: 'Montserrat', sans-serif;
-
 }
 
 #lupa {
-  display: flex;
-  position: relative;
-  left: 320px;
-  top: 190px;
-  width: 25px;
-
+  width: 18px;
 }
 
 select {
-  height: 40px;
+  height: 35px;
   border-radius: 20px;
   width: auto;
+  display: flex;
+  position: relative;
+  font-weight: bold;
 }
 
 .filterSelect {
   display: flex;
-
+  margin: 0;
   flex-direction: row;
-  justify-content: space-around;
-
-}
-
-#glasses {
-  align-self: baseline;
-  left: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10px;
 }
 
 #buho {
-  width: 5%;
+  height: 6%;
+  width: 10%;
   display: flex;
   position: relative;
   left: 10px;
@@ -154,11 +126,7 @@ select {
   position: relative;
 }
 
-#hibrido {
-  position: absolute;
-  top: 60%;
-  left: 80%;
-}
+
 
 #foto {
   margin-left: 5%;
@@ -170,16 +138,17 @@ select {
 .subtitles {
   font-family: 'Calligraffitti', cursive;
   display: flex;
-  position: relative;
   bottom: 70px;
-  font-size: 65px;
   margin-left: 15%;
   margin-right: 30px;
-
+  font-size: 20px;
+  top: 80px;
+  left: 20px;
 }
 
 #summary {
   margin-right: 0;
+  margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
 }
@@ -189,12 +158,20 @@ select {
   justify-content: space-between;
 }
 
+#hibrido {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 p {
   display: flex;
-  font-size: 30px;
-  text-align: justify;
   font-family: 'Poppins', sans-serif;
-  margin-right: 300px;
+  font-size: 12px;
+  margin-right: 55px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 #infoAboutHouses {
@@ -212,7 +189,7 @@ p {
 h3 {
   display: flex;
   align-self: center;
-  font-size: 80px;
+  font-size: 25px;
   font-family: 'Calligraffitti', cursive;
   text-shadow: black;
   margin-left: 43%;
@@ -274,7 +251,7 @@ h3 {
 
 #paragraph {
   font-family: 'Caveat', cursive;
-  font-size: 180%;
+  font-size: 1rem;
   display: flex;
   align-items: right;
   align-self: center;
@@ -307,12 +284,13 @@ h3 {
 }
 
 .data {
-  font-size: 15px;
+  font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: justify;
   flex-direction: row;
   margin-right: 20px;
   margin-left: 8px;
+  color: rgb(223, 222, 222);
 
 }
 
@@ -353,7 +331,7 @@ h3 {
   display: flex;
   position: relative;
   top: 100px;
-  left: 200px;
+  left: 100px;
   width: 16%;
   height: 1%;
   color: #fff;
@@ -363,7 +341,7 @@ h3 {
   cursor: pointer;
   line-height: 1%;
   text-align: center;
-  right: 50px;
+  right: 0px;
   margin-bottom: 25px;
   padding: 1.5% 4%;
   font-size: 30px;
@@ -381,21 +359,49 @@ h3 {
 
 }
 
+.contaIndividual {
+  font-size: 25px;
+  display: flex;
+  position: relative;
+  left: 240px;
+  top: 78px;
+  color: white;
+
+}
+
+button{
+  height: 70px;
+  width: 100px;
+  color: #fff;
+  background-color: #641e72;
+  cursor: pointer ;
+  margin-bottom: 20px;
+}
+
+#piechart{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 @media only screen and (min-width:320px) and (max-width:1280px) {
   body {
+
     margin-bottom: 5px;
     background-size: 100%;
+    overflow-x: no-scroll;
   }
 
   #barra {
-    display: flexbox;
+    display: flex;
     flex-wrap: wrap;
     margin: 0;
-    height: 100px;
-  }
+    }
 
   h1 {
-
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
     font-size: 28px;
     margin-right: 0;
     margin-top: 5px;
@@ -412,102 +418,20 @@ h3 {
     margin-left: 20px;
   }
 
-  .select {
-    display: flex;
-    position: relative;
-    font-size: 7px;
-    top: 77px;
-
-  }
-
   .filterSelect {
     display: flex;
-    position: relative;
-    right: 435px;
-    bottom: 87px;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
   }
-
-  select {
-    width: auto;
-    height: 10px;
-    display: flex;
-    position: relative;
 
   }
 
-  #search {
-    display: flex;
-    position: relative;
-    left: 65px;
-    width: 150px;
-    height: 15px;
-    top: 50px;
-  }
 
-  hr {
-    height: 2px;
-  }
 
-  #raya {
 
-    height: 0;
-  }
 
-  #lupa {
-    left: 222px;
-    top: 32px;
-    width: 18px;
-  }
-
-  #buho {
-    height: 6%;
-    width: 10%;
-
-  }
-
-  #glasses {
-
-    height: 0%;
-    width: 00%;
-
-  }
-
-  #foto {
-    width: 28%;
-    height: 28%;
-    margin-right: 5%;
-    margin-top: 30%;
-  }
-
-  #paragraph {
-    font-size: 20px;
-    margin-right: 5%;
-
-  }
-
-  #hibrido {
-    top: 0;
-    left: 0;
-  }
-
-  .subtitles {
-    font-size: 20px;
-    top: 80px;
-    left: 20px;
-  }
-
-  p {
-    font-size: 12px;
-    margin-right: 55px;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-
-  h3 {
-    font-size: 25px;
-  }
 
   .card {
     width: 50px;
@@ -538,6 +462,30 @@ h3 {
   }
 
   hr {
+    margin: 0;
     height: 2px;
+    background-color: black;
+    width: 100%;
   }
-}
+
+  #piechart{
+
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  button{
+    height: 40px;
+    width: 80px;
+    color: #fff;
+    background-color: #641e72;
+    cursor: pointer ;
+    font-size: 10px;
+  }
+
+
+
+
+
+
