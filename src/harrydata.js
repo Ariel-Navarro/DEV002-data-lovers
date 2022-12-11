@@ -11735,7 +11735,7 @@ const data = {
       "releaseDay": "July 2, 1998",
       "author": "J. K. Rowling",
       "description": "Harry Potter and the sophomores investigate a malevolent threat to their Hogwarts classmates, a menacing beast that hides within the castle.",
-      "img": "imag/Books/Libro2.jpg"
+      "img": "https://th.bing.com/th/id/R.0a334f5699ce79a5e8f0a28166f78c77?rik=V2v9uXadtdbHqQ&riu=http%3a%2f%2fi1.wp.com%2fthebooksmugglers.com%2fwp-content%2fuploads%2f2016%2f01%2fHarry_Potter_and_the_Chamber_of_Secrets_US_cover.jpg&ehk=pZ0pDmP7tLJ65KFUWxcgkEWwzqg%2bvHniENWNveFVGUw%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"
 
     },
     {
