@@ -8,71 +8,70 @@
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-  <link rel="preconectar" href="https://fonts.googleapis.com">
-  <link rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
   <link href="https: //fonts.googleapis.com/css2? family= Poppins:wght@200 & display=swap" rel="stylesheet">
 </head>
 
 <body>
-
+  <!-- Encabezado de la página -->
   <div id="barra">
     <img id="logo" src="imag/logo-Harry-Potter.png" />
     <h1>The Harry Potter's world</h1>
-
-
-      <input id="search" type="text">
-      <button id="button">Home</button>
-      <img src="imag/buscando.png" id="lupa">
-
-
+    <input id="search" type="text">
+    <img src="imag/buscando.png" id="lupa">
+    <button id="button">Home</button>
   </div>
+
   <hr>
-   <section id="filter" class="filterSelect">
-      <select name="characters" class="select" id="chooseCharacters">
-        <option  disabled selected>Filter for Characters</option>
-        <option class="opcion" value="a-z">A-Z</option>
-        <option class="opcion" value="z-a">Z-A</option>
-        <option class="opcion" value="alive">Alive</option>
-        <option class="opcion" value="dead">Dead</option>
-        <option class="opcion" value="speciesHuman">Species human</option>
-        <option  class="opcion" value="speciesHalfGiant">Species half-giant</option>
-      </select>
-      <select name="Spells" class="select" id="segundoSelect">
-        <option disabled selected>Spells</option>
-        <option class="opcion" value="spellsa-z">Spells A-Z</option>
-        <option class="opcion" value="spellsz-a">Spells Z-A</option>
-        <option class="opcion" value="spellTypeCharm">Spell type Charm</option>
-        <option class="opcion" value="spellTypeHex">Spell type Hex</option>
-        <option class="opcion" value="spellTypeJinx">Spell type Jinx</option>
-        <option class="opcion" value="spellTypeTransportation">Spell type Transportation</option>
-      </select>
-      <select name="Books" class="select" id="tercerSelect">
-        <option disabled selected>Books</option>
-        <option value="recently">Recently</option>
-        <option value="oldest">Oldest</option>
-      </select>
-      <select name="Potions" class="select" id="cuartoSelect">
-        <option disable selected>Potions</option>
-        <option class="opcion"  value="ascendiente">A-Z</option>
-        <option class="opcion" value="descendiente">Z-A</option>
-      </select>
-    </section>
+
+  <!-- Selects para los filtros -->
+  <section id="filter" class="filterSelect">
+    <select name="characters" class="select" id="chooseCharacters">
+      <option disabled selected>Filter for Characters</option>
+      <option class="opcion" value="a-z">A-Z</option>
+      <option class="opcion" value="z-a">Z-A</option>
+      <option class="opcion" value="alive">Alive</option>
+      <option class="opcion" value="dead">Dead</option>
+      <option class="opcion" value="speciesHuman">Species human</option>
+      <option class="opcion" value="speciesHalfGiant">Species half-giant</option>
+    </select>
+    <select name="Spells" class="select" id="segundoSelect">
+      <option disabled selected>Spells</option>
+      <option class="opcion" value="spellsa-z">Spells A-Z</option>
+      <option class="opcion" value="spellsz-a">Spells Z-A</option>
+      <option class="opcion" value="spellTypeCharm">Spell type Charm</option>
+      <option class="opcion" value="spellTypeHex">Spell type Hex</option>
+      <option class="opcion" value="spellTypeJinx">Spell type Jinx</option>
+      <option class="opcion" value="spellTypeTransportation">Spell type Transportation</option>
+    </select>
+    <select name="Books" class="select" id="tercerSelect">
+      <option disabled selected>Books</option>
+      <option value="recently">Recently</option>
+      <option value="oldest">Oldest</option>
+    </select>
+    <select name="Potions" class="select" id="cuartoSelect">
+      <option disable selected>Potions</option>
+      <option class="opcion" value="ascendiente">A-Z</option>
+      <option class="opcion" value="descendiente">Z-A</option>
+    </select>
+  </section>
+  <!-- Termina el encabezado de la página -->
+
+  <!-- Contador que nos dice el total de elementos que estamos viendo -->
   <div id="contador" class="contaIndividual"></div>
 
   <div id="contenedor">
+
+
     <div id="raya"></div>
     <img id="buho" src="imag/buho.png">
+
+    <!-- Botones principales para ver el total de elementos -->
     <button id="btnCharac" class="btnPrincipal">Characters</button>
     <button id="btnSpells" class="btnPrincipal">Spells</button>
     <button id="btnBooks" class="btnPrincipal">Books</button>
@@ -80,7 +79,7 @@
   </div>
 
 
-
+  <!-- Espacio donde se renderiza las cartas -->
   <section id="cardConteiner">
 
     <div class="test"></div>
@@ -89,6 +88,7 @@
 
 
   <section id="home">
+
     <div id="box">
       <div id="autora">
         <img id="foto" src="imag/autora.jpg" width="20%">
@@ -143,12 +143,10 @@
       </section>
     </div>
 
-
-
-<div id="piechart"></div>
-</section>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
+<!-- Espacio donde se muestra el gráfico sobre el género de los personajes -->
+    <div id="piechart"></div>
+  </section>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
   <script src="./main.js" type="module"></script>
 </body>

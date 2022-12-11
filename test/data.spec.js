@@ -84,7 +84,6 @@ describe('charactersAlive muestra los personajes en true', () => {
   });
   it('Deberia devolver los personajes en true', () => {
     let characAliv = charactersAlive(charactersData);
-    console.log(characAliv);
     expect(characAliv[0].alive).toEqual('true');
     expect(characAliv[1].alive).toEqual('true');
     expect(characAliv[2].alive).toEqual('false');
