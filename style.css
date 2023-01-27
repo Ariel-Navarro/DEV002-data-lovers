@@ -41,7 +41,7 @@ body {
   margin-bottom: 0;
   width: 100%;
   justify-content: space-around;
-  align-items:center;
+  align-items: center;
 }
 
 #logo {
@@ -50,7 +50,8 @@ body {
   left: 45%;
   margin-top: 25px;
   margin-left: 20px;
-  width: auto;
+  width: 100px;
+  height: 100px;
   margin-bottom: 25px;
 }
 
@@ -62,7 +63,6 @@ h1 {
   margin-top: 0;
   left: 200px;
   margin: 0;
-  text-align: center;
 }
 
 #contenedor {
@@ -86,7 +86,7 @@ h1 {
 }
 
 select {
-  height: 35px;
+  height: 30px;
   border-radius: 20px;
   width: auto;
   display: flex;
@@ -361,24 +361,22 @@ h3 {
 
 .contaIndividual {
   font-size: 25px;
-  display: flex;
-  position: relative;
   left: 240px;
   top: 78px;
   color: white;
 
 }
 
-button{
+button {
   height: 70px;
   width: 100px;
   color: #fff;
   background-color: #641e72;
-  cursor: pointer ;
+  cursor: pointer;
   margin-bottom: 20px;
 }
 
-#piechart{
+#piechart {
   display: flex;
   justify-content: center;
   margin-top: 30px;
@@ -393,13 +391,10 @@ button{
   }
 
   #barra {
-    display: flex;
-    flex-wrap: wrap;
     margin: 0;
-    }
+  }
 
   h1 {
-    position: relative;
     display: flex;
     flex-wrap: nowrap;
     font-size: 28px;
@@ -426,66 +421,63 @@ button{
     padding-top: 20px;
   }
 
-  }
-
-
-
-
-
-
-  .card {
-    width: 50px;
-    height: 70px;
-    margin-right: 0;
-    margin-top: 5px;
-    margin-left: 2px;
-  }
-
-  #cardConteiner {
-    margin: 15px;
-  }
-
-  #infoAboutHouses {
-    font-size: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 5px;
-  }
-
-  .btnPrincipal {
-    left: 0;
-    right: 0;
-    top: 50px;
-    font-size: 10px;
+  select {
+    height: 24px;
+    border-radius: 20px;
     width: auto;
-    margin: 0;
-  }
-
-  hr {
-    margin: 0;
-    height: 2px;
-    background-color: black;
-    width: 100%;
-  }
-
-  #piechart{
-
     display: flex;
-    justify-content: center;
-    margin-top: 30px;
+    position: relative;
+    font-weight: bold;
   }
+}
 
-  button{
-    height: 40px;
-    width: 80px;
-    color: #fff;
-    background-color: #641e72;
-    cursor: pointer ;
-    font-size: 10px;
-  }
+.card {
+  width: 50px;
+  height: 70px;
+  margin-right: 0;
+  margin-top: 5px;
+  margin-left: 2px;
+}
 
+#cardConteiner {
+  margin: 15px;
+}
 
+#infoAboutHouses {
+  font-size: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
 
+.btnPrincipal {
+  left: 0;
+  right: 0;
+  top: 50px;
+  font-size: 10px;
+  width: auto;
+  margin: 0;
+}
 
+hr {
+  margin: 0;
+  height: 2px;
+  background-color: black;
+  width: 100%;
+}
 
+#piechart {
 
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+button {
+  height: 40px;
+  width: 80px;
+  color: #fff;
+  background-color: #641e72;
+  cursor: pointer;
+  font-size: 10px;
+}
